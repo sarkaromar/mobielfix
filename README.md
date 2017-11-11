@@ -33,11 +33,11 @@ Clone with HTTPS
 Use Git or checkout with SVN using the web URL.
 
 ```sh
-https://github.com/sarkaromar/tower.git
+https://github.com/sarkaromar/mobielfix.git
 ```
 
 ```sh
-cd tower/
+cd mobielfix/
 $ npm install
 ```
 
