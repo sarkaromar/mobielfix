@@ -10,10 +10,34 @@
 }
 
 body{
-    background: #f7f8f9 !important;
+    background: #ffffff !important;
     font-family: 'Hind Vadodara', sans-serif;
 }
 // Default settings
+
+$dark: #0D47A1;
+$primary: #1565C0;
+$xlight: #1976D2;
+$secondary: #094c80;
+$light: #BBDEFB;
+$xxlight: #90CAF9;
+
+.btn-danger{
+    background: $primary !important;
+    border: $primary !important;
+    border-radius: 0px !important;
+}
+.btn-outline-danger{
+    border:1px solid $primary !important;
+    border-radius: 0px !important;
+    color: $light !important;
+    &:hover{
+        background: $primary !important;
+    }
+}
+.form-control{
+    border-radius: 0px !important;
+    }
 $phones: "(max-width: 575px)";
 $min_phones: "(min-width: 576px)";
 $max_phones: "(max-width: 767px)";
@@ -58,9 +82,9 @@ $large_device: "(min-width: 1200px)";
     .delay-#{$i} { @include animate-delay(500ms * $i); }
 }
 
-h1{color: #321911 !important;}
-h3{color: #3e2723 !important;}
-p{color: #6a4f4b !important;}
+h1{color: $primary !important;}
+h3{color: $xlight !important;}
+p{color: $secondary !important;}
 
 // Custom Style
 header{
@@ -73,10 +97,10 @@ header{
     }
 }
 .top-nav{
-    background: #1b0000;
+    background: $dark;
     padding: 4px;
     p{
-        color: #d3b8ae !important;
+        color: $light !important;
         padding: 0px;
         margin: 0px;
         font-size: 13px;
@@ -90,21 +114,24 @@ header{
             float: left;
         }
         a{
-            color: #6a4f4b;
+            color: $light;
             display: inline-block;
             padding: 0px;
             margin-left: 10px;
             &:hover{
-                color: #be9c91;
+                color: $xxlight;
             }
         }
     }
 }
 .main-nav{
-    background: #3e2723;
+    background: $xlight;
     .logo{
+        img{
+            height: 50px;
+        }
         h1{
-            color: #d3b8ae !important;
+            color: $light !important;
         }
         a{
             color: #ffffff;
@@ -116,10 +143,10 @@ header{
     .navbar-nav{
         .nav-item{
             .nav-link{
-                color: #d3b8ae;
+                color: $light;
                 padding: 19px 10px;
                 &:hover{
-                    color: #be9c91;
+                    color: $xxlight;
                 }
                 @media #{$max_tablets} {
                     padding: 5px;
@@ -128,7 +155,7 @@ header{
         }
         .active{
             .nav-link{
-                color: #be9c91 !important;
+                color: $xxlight !important;
             }
         }
     }
@@ -136,8 +163,8 @@ header{
         position: absolute;
         right: 0px;
         top: -46px;
-        color: #be9c91 !important;
-        border: 1px solid #be9c91 !important;
+        color: $xxlight !important;
+        border: 1px solid $xxlight !important;
         border-radius: 0px;
     }
     .navbar{
@@ -150,17 +177,17 @@ header{
         width: 40px;
         text-align: center;
         text-decoration: none;
-        border: 1px solid #d3b8ae;
+        border: 1px solid $light;
         -webkit-border-radius: 100%;
         border-radius: 100%;
         font-size: 22px;
-        color: #d3b8ae;
+        color: $light;
         margin-left: 15px;
     }
 }
 .bg-1{
-    background: #3e2723;
-    color: #d3b8ae;
+    background: $xlight;
+    color: $light;
 }
 .banner{
     // .carousel{
@@ -172,19 +199,19 @@ header{
     //     }
         
     // }
-    background: url("../images/banner.jpg") center no-repeat fixed;
+    background: #BBDEFB;
     background-size: cover;
     h3{
         padding: 10px;
-        color: #d3b8ae !important;
-        background: rgba(25, 0, 0, 0.5) !important;
+        color: $light !important;
+        background: rgba(25, 117, 210, 0.75)!important;
         margin-bottom: 10px;
         display: inline-block !important;
     }
     p{
         padding: 10px;
-        color: #d3b8ae !important;
-        background: rgba(25, 0, 0, 0.5) !important;
+        color: $light !important;
+        background: rgba(25, 117, 210, 0.75)!important;
         margin-bottom: 10px;
         display: inline-block !important;
     }
@@ -193,10 +220,10 @@ header{
     height: 250px;
     // background: url("../images/banner.jpg") center no-repeat fixed;
     // background-size: cover;
-    background: #d3b8ae;
+    background: $light;
     .page-tiltle{
         margin-top: 150px;
-        color: #321911;
+        color: $primary;
         text-align: center;
         text-transform: uppercase;
     }
@@ -214,7 +241,7 @@ header{
 i.fa-archive{
     font-size: 30px;
     padding: 10px;
-    border: 1px solid #1b0000;
+    border: 1px solid $dark;
     border-radius: 100%;
 }
 .services{
@@ -234,7 +261,7 @@ i.fa-archive{
     }
 }
 .find{
-    background: #d3b8ae;
+    background: $light;
     padding: 75px 0;
     img{
         width: 100%;
@@ -247,11 +274,11 @@ i.fa-archive{
         height: 150px;
         width: 150px;
         border-radius: 100%;
-        background: #6a4f4b;
+        background: $secondary;
         color: #ffffff;
         text-align: center;
         padding: 48px 0;
-        border: 8px solid #3e2723;
+        border: 8px solid $xlight;
         margin: 0 auto;
     }
     p{
@@ -262,7 +289,7 @@ i.fa-archive{
 }
 .testimonial{
     padding: 75px 0;
-    background: #d3b8ae;
+    background: $light;
     h3{
         text-align: center;
     }
@@ -287,7 +314,7 @@ i.fa-archive{
         }
         .carousel-indicators{
             li{
-                background: #1b0000;
+                background: $dark;
             }
         }
         .carousel-caption{
@@ -322,7 +349,7 @@ i.fa-archive{
     }
     .repair-bg{
         padding: 15px;
-        background: rgba(211, 184, 174, 0.5);
+        background: rgba(187, 222, 251, 0.8);
     }
     ul{
         margin: 0px;
@@ -333,11 +360,11 @@ i.fa-archive{
         }
         a{
             display: block;
-            color: #321911;
+            color: $primary;
             font-size: 16px;
             text-decoration: none;
             &:hover{
-                color: #1b0000;
+                color: $dark;
                 font-weight: 600;
             }
         }
@@ -351,7 +378,7 @@ i.fa-archive{
 .brand{
     padding: 75px 0;
     text-align: center;
-    background: #d3b8ae;
+    background: $light;
     img{
         width: 100%;
     }
@@ -361,7 +388,7 @@ i.fa-archive{
     height: 0; 
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-top: 25px solid #d3b8ae;
+    border-top: 25px solid $light;
     margin: 0 auto;
     position: absolute;
     left: 0;
@@ -379,28 +406,35 @@ i.fa-archive{
     right: 0;
 }
 #footer{
-    background: #3e2723;
+    background: $xlight;
     padding: 75px 0;
+    p{
+        color: $light !important;
+    }
     h3{
-        color: #d3b8ae !important;
+        color: $light !important;
         font-size: 20px;
         margin-bottom: 20px;
+        text-transform: uppercase;
     }
     h5{
-        color: #6a4f4b;
+        color: $secondary;
     }
     ul{
         li{
             list-style: none;
         }
         a{
-            color: #d3b8ae !important;
+            color: $light !important;
             font-size: 14px;
         }
     }
     .f-news{
+            border-bottom: 1px solid #1565c0;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
         h4{
-            color: #be9c91;
+            color: $xxlight;
             font-size: 16px;
             margin: 0px;
             padding: 0px;
@@ -411,8 +445,13 @@ i.fa-archive{
             padding: 0px;
         }
         small{
-            color: #d3b8ae;
+            color: $light;
         }
     }
 }
 
+#footer-bottom{
+    background: $dark;
+    color: $light;
+    padding: 15px;
+}
